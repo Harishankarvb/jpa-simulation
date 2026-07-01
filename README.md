@@ -16,4 +16,7 @@ Replaces error-prone manual sweeping with a grid search that finds the gain-maxi
 - Sweeps DC bias current and extracts the resonant frequency at each point (via the gain-curve argmax)
 - Converts bias current to normalized flux Φ/Φ₀ using the flux quantum
 - Exploits the circuit's inherent symmetry to mirror the curve beyond the solver's reliable range (~0.48 Φ₀), producing a full tuning curve from a half-sweep
+
+### updated!! 
+- Working point on the flux tuning curve is now indicated on the Graph.
   
