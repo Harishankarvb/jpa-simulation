@@ -274,6 +274,20 @@ p2 = plot(
     xlims=(0, 1)
 )
 
+# ── Mark current operating point (Idc = 142 µA → 0.34 Φ₀) ──
+op_flux = 0.34
+op_idx  = argmin(abs.(flux_full .- op_flux))
+op_freq = freq_full[op_idx]
+
+scatter!(p2,
+    [op_flux], [op_freq],
+    label="Operating point: $(round(op_freq, digits=2)) GHz @ 0.34 Φ₀",
+    markersize=7,
+    color=:red,
+    markerstrokecolor=:black,
+    markerstrokewidth=1.5
+)
+
 # ════════════════════════════════════════════════════════════
 #   FINAL — DISPLAY ALL PLOTS
 # ════════════════════════════════════════════════════════════
